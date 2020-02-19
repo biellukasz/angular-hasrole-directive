@@ -1,0 +1,20 @@
+<hello name="{{ name }}"></hello>
+<p>
+  Start editing to see some magic happen :)
+</p>
+<div *appHasRole="[Role.ADMIN, Role.MODERATOR];else noAdminRole">
+  DISPLAYED FOR ADMIN
+</div>
+
+  <ng-template #noAdminRole>
+    DISPLAYED IF USER HAS NO ADMIN ROLE
+  </ng-template>
+
+
+<div *appHasRole="[Role.MODERATOR];else noModeratorRole">
+  DISPLAYED FOR MODERATOR 
+</div>
+
+  <ng-template #noModeratorRole>
+    DISPLAYED IF USER HAS NO MODERATOR ROLE
+  </ng-template>
